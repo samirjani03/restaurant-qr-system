@@ -68,3 +68,21 @@ INSERT INTO menu (name, description, price, available) VALUES
 
 -- Insert sample table numbers
 INSERT INTO tables (table_number) VALUES (1), (2), (3);
+
+
+--New
+CREATE TABLE tables (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    is_occupied BOOLEAN DEFAULT 0
+);
+CREATE TABLE menu (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    item_name VARCHAR(255),
+    price DECIMAL(10, 2)
+);
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    table_id INT,
+    item_id INT,
+    status VARCHAR(50)
+);
