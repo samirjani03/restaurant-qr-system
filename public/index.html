@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SmartDine - Restaurant Ordering System</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/icons/favicon.png">
+    
+    <!-- Meta tags for better SEO -->
+    <meta name="description" content="Digital menu and ordering system for restaurants">
+    <meta name="keywords" content="restaurant, menu, order, food, digital menu">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <header>
+            <h1>Welcome to Restaurant Name</h1>
+            <div class="table-info">
+                Table #<span id="tableNumber"></span>
+            </div>
+        </header>
+
+        <!-- Categories Navigation -->
+        <nav class="categories-nav">
+            <div class="category-list" id="categoryList">
+                <!-- Categories will be dynamically inserted here -->
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Menu Items Section -->
+            <section class="menu-items" id="menuItems">
+                <!-- Menu items will be dynamically inserted here -->
+            </section>
+
+            <!-- Cart Section -->
+            <div class="cart-container">
+                <div class="cart-header">
+                    <h2>Your Order</h2>
+                    <span class="cart-total" id="cartTotal">₹0.00</span>
+                </div>
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be dynamically inserted here -->
+                </div>
+                <div class="cart-footer">
+                    <textarea 
+                        id="specialInstructions" 
+                        placeholder="Any special instructions?"
+                        class="special-instructions"
+                    ></textarea>
+                    <button id="placeOrder" class="btn-primary">
+                        Place Order
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Order Status Modal -->
+    <div id="orderStatus" class="order-status hidden">
+        <h3>Order Status</h3>
+        <div class="status-content">
+            <!-- Status content will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Error Message Toast -->
+    <div id="errorToast" class="error-toast hidden">
+        <span class="error-message"></span>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/js/config.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
